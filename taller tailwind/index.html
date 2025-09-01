@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAACkUlEQVQ4jX2Ty2tURxSFv2eP4zOTJk18m8Q3/E+JkCSJiZgm0Wq0Wn/Q8y+01U+k9m9QjEaFqKioqKgoiqgoiiwKCgqioKiKogqKqGixYkS0iWlCGmH89v1Lh26lUkhxQWJ++9655z4F4X8d4+53Wv5J5r4cE1l42+7D3v+R28v09F8jLg6fBq4K9l0o/5XwH4D5gJqAD9t3C8B7P38D2Qe9O5XzD1wTq3/t+R2870h/B18BnwKGA72/KGAa8Cmg2/c+1fRk9r4w1v38L4JtL/J/4Q1A9W0/Y+S77fR0P95g2/0N9kXAX3P9/sXgI8DqgC9m/fM3P5h4g9o/B2gB9DdgIqAJ/d8K4E+B+1vNf+b7f2y9v/gB9P/jB9j7R8BbgD7APcBPA2wJmAP479q6r+jJz99j7b8P+HnLd7+C7jfwg4D7gB8CzgX8M2ARcBXgC+C2A5wK2AboAPgO8A/Sj8A+1fSjf7d1vV8v36+u59/gBv+Yewf/w3wXwD89R/Jm6f2P09Qy+37e6gW7d97eB3gXw/Sfg/2Xgf+g3b91PAb1v9v/Y+2fC/w/B/C/C74KfgS+BvAHYCvgUcBdwF7Af8B/gI8B9gN+B/51+u7D+0fU7934r6f6B8C+D/y+BwR7A4I9gL3D0z0h3v/D0Q7d3kC7t+72dJ9G3r+Gv4O+fN8D2j8c1v9x1+33n6b9/2nU/u6e9z8/9329v3M6X3A/g7f+v8b75u1XAPw3wX8K+G+C/yf0X/wzD9/i8wG+FwG+FwD5L9P522G+F8GfAX8L/g7/DdgM+DXwB2BnYDbA84D3D/n/G/i3/w3gD0P2u/EAAAAASUVORK5CYII=">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .dashboard-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-600">AgroTech Solutions</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#inicio" class="text-gray-600 hover:text-green-600 transition">Inicio</a>
+                <a href="#caracteristicas" class="text-gray-600 hover:text-green-600 transition">Características</a>
+                <button onclick="showLoginModal()" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Iniciar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="bg-green-500 text-white py-20 px-6 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Revoluciona tu agricultura con tecnología IoT</h1>
+            <p class="mt-4 text-xl md:text-2xl opacity-90">Soluciones inteligentes para una cosecha más productiva y sostenible.</p>
+            <button onclick="showLoginModal()" class="mt-8 bg-white text-green-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition transform hover:scale-105">
+                Comienza Ahora
+            </button>
+        </div>
+    </header>
+
+    ---
+
+    <section id="caracteristicas" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Características Clave</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="flex flex-col items-center text-center p-6 bg-gray-100 rounded-lg shadow-md">
+                    <div class="bg-green-100 p-4 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Registro y Autenticación (RF1)</h3>
+                    <p class="text-gray-600">Cada finca tendrá su acceso seguro con credenciales únicas para proteger sus datos.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-gray-100 rounded-lg shadow-md">
+                    <div class="bg-green-100 p-4 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path d="M5 4a1 1 0 00-2 0v7a1 1 0 002 0V4zM11 4a1 1 0 10-2 0v7a1 1 0 102 0V4zM17 4a1 1 0 10-2 0v7a1 1 0 102 0V4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Gestión de Sensores (RF2)</h3>
+                    <p class="text-gray-600">Administra fácilmente todos tus dispositivos IoT: registra, edita o elimina sensores conectados a cada parcela.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-gray-100 rounded-lg shadow-md">
+                    <div class="bg-green-100 p-4 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 0116 0A7.997 7.997 0 0110 18H2z"></path><path d="M2 10a8 8 0 0116 0A7.997 7.997 0 0110 18H2zM10 2a8 8 0 00-8 8h16a8 8 0 00-8-8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Visualización en Tiempo Real (RF3)</h3>
+                    <p class="text-gray-600">Monitorea tus métricas clave como humedad, temperatura y pH en un panel de control interactivo y en tiempo real.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-gray-100 rounded-lg shadow-md">
+                    <div class="bg-green-100 p-4 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3-3z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Generación de Alertas (RF4)</h3>
+                    <p class="text-gray-600">Recibe notificaciones automáticas por correo si alguna variable crítica supera los rangos establecidos.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-gray-100 rounded-lg shadow-md">
+                    <div class="bg-green-100 p-4 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path d="M15 11a1 1 0 11-2 0 1 1 0 012 0zM12 10a1 1 0 110-2 1 1 0 010 2zM9 10a1 1 0 110-2 1 1 0 010 2zM6 10a1 1 0 110-2 1 1 0 010 2z"></path><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM2 10a8 8 0 1116 0 8 8 0 01-16 0z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Reportes Históricos (RF5)</h3>
+                    <p class="text-gray-600">Genera reportes detallados en PDF o Excel sobre las condiciones históricas de tus cultivos, filtrando por fechas.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-gray-100 rounded-lg shadow-md">
+                    <div class="bg-green-100 p-4 rounded-full mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zm3 9a6 6 0 01-12 0v-2a1 1 0 011-1h10a1 1 0 011 1v2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Gestión Multiusuario (RF6)</h3>
+                    <p class="text-gray-600">Permite que un mismo cliente tenga múltiples usuarios con diferentes roles (administrador, técnico, etc.).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section id="dashboard" class="py-20 px-6 bg-gray-100 hidden">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Dashboard de Monitoreo</h2>
+            <div class="dashboard-grid">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">Métricas en Tiempo Real (Temperatura)</h3>
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">Sensores Conectados</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                            <span>Sensor Humedad Parcela 1</span>
+                            <span class="text-xs bg-green-200 text-green-800 px-2 py-1 rounded-full">Activo</span>
+                            <div class="flex space-x-2">
+                                <button class="text-blue-500 hover:text-blue-700">Editar</button>
+                                <button class="text-red-500 hover:text-red-700">Eliminar</button>
+                            </div>
+                        </li>
+                        <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                            <span>Sensor Temperatura Parcela 2</span>
+                            <span class="text-xs bg-green-200 text-green-800 px-2 py-1 rounded-full">Activo</span>
+                            <div class="flex space-x-2">
+                                <button class="text-blue-500 hover:text-blue-700">Editar</button>
+                                <button class="text-red-500 hover:text-red-700">Eliminar</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="mt-4 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">Añadir Nuevo Sensor</button>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-orange-500 mb-4">Alertas</h3>
+                    <div class="space-y-3">
+                        <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-3 rounded-lg" role="alert">
+                            <p class="font-bold">¡Alerta Crítica!</p>
+                            <p>Humedad del suelo 15% - Parcela 1.</p>
+                        </div>
+                        <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-3 rounded-lg" role="alert">
+                            <p class="font-bold">Aviso</p>
+                            <p>Temperatura alta 35°C - Parcela 2.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">Reportes Históricos</h3>
+                    <p class="text-gray-600 mb-4">Selecciona un rango de fechas para generar un reporte.</p>
+                    <div class="flex items-center space-x-2">
+                        <input type="date" class="border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <span class="text-gray-500">a</span>
+                        <input type="date" class="border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <button class="mt-4 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">Generar Reporte (PDF/Excel)</button>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">Gestión de Usuarios</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                            <span>Admin General</span>
+                            <span class="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded-full">Admin</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                            <span>Técnico de Campo</span>
+                            <span class="text-xs bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full">Técnico</span>
+                        </li>
+                    </ul>
+                    <button class="mt-4 w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">Añadir Usuario</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="loginModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-75 flex items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm relative">
+            <button onclick="closeLoginModal()" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+            <h2 class="text-3xl font-bold text-center text-green-600 mb-6">Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="tu-correo@ejemplo.com" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-gray-700 font-semibold mb-2">Contraseña</label>
+                    <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="w-full bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">
+                    Entrar
+                </button>
+            </form>
+            <p class="text-center text-gray-500 text-sm mt-4">¿No tienes una cuenta? <a href="#" class="text-green-600 hover:underline" onclick="showRegisterModal()">Regístrate</a></p>
+        </div>
+    </div>
+
+    <div id="registerModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-75 flex items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm relative">
+            <button onclick="closeRegisterModal()" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+            <h2 class="text-3xl font-bold text-center text-green-600 mb-6">Regístrate</h2>
+            <form id="registerForm">
+                <div class="mb-4">
+                    <label for="reg-email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                    <input type="email" id="reg-email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="tu-correo@ejemplo.com" required>
+                </div>
+                <div class="mb-6">
+                    <label for="reg-password" class="block text-gray-700 font-semibold mb-2">Contraseña</label>
+                    <input type="password" id="reg-password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="w-full bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">
+                    Crear Cuenta
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let temperatureChart; // Define a global variable to hold the chart instance
+
+        function showLoginModal() {
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function showRegisterModal() {
+            closeLoginModal();
+            document.getElementById('registerModal').classList.remove('hidden');
+        }
+
+        function closeRegisterModal() {
+            document.getElementById('registerModal').classList.add('hidden');
+        }
+
+        function initializeDashboard() {
+            const ctx = document.getElementById('temperatureChart').getContext('2d');
+            temperatureChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Temperatura del Suelo (°C)',
+                        data: [],
+                        borderColor: '#10B981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        tension: 0.4,
+                        fill: true,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            min: 15,
+                            max: 40,
+                        }
+                    },
+                    animation: {
+                        duration: 0
+                    }
+                }
+            });
+
+            // Simulate real-time data updates
+            setInterval(() => {
+                const now = new Date();
+                const newLabel = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+                const newData = 20 + Math.random() * 10; // Random data between 20 and 30
+
+                temperatureChart.data.labels.push(newLabel);
+                temperatureChart.data.datasets[0].data.push(newData);
+                
+                // Keep the number of data points to a maximum of 10
+                if (temperatureChart.data.labels.length > 10) {
+                    temperatureChart.data.labels.shift();
+                    temperatureChart.data.datasets[0].data.shift();
+                }
+
+                temperatureChart.update();
+            }, 2000); // Update every 2 seconds
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            closeLoginModal();
+            // Show the dashboard and hide the landing page
+            document.getElementById('inicio').classList.add('hidden');
+            document.getElementById('caracteristicas').classList.add('hidden');
+            document.getElementById('dashboard').classList.remove('hidden');
+            document.querySelector('nav').scrollIntoView({ behavior: 'smooth' });
+            initializeDashboard();
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            closeRegisterModal();
+            alert('Registro exitoso! Por favor, inicia sesión.');
+        });
+    </script>
+</body>
+</html>
